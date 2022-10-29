@@ -1,8 +1,15 @@
 #include "Person.h"
+#include<string>
 
 
-
-
+void Person::display_information()
+{
+	cout << endl;
+	cout << "Name: " << name << endl;
+	cout << "Address: " << address << endl;
+	cout << "Phone: " << phone << endl;
+	cout << "Age: " << age << endl;
+}
 
 
 Person::Person(const char* i_name, const char* i_address, const char* i_phone, int i_age)
@@ -22,7 +29,7 @@ Person::Person(const char* i_name, const char* i_address, const char* i_phone, i
 
 ostream& operator<<(ostream& out, Person* obj)
 {
-	obj->display();
+	
 	cout << "Name: " << obj->name << endl;
 	cout << "Address: " << obj->address << endl;
 	cout << "Phone: " << obj->phone << endl;
@@ -33,9 +40,9 @@ ostream& operator<<(ostream& out, Person* obj)
 istream& operator>>(istream& in, Person* obj)
 {
 	cout << "Enter Name: " << endl;
-	in >> obj->name;
+	in.getline(obj->name,SIZE);
 	cout << "Enter Address: " << endl;
-	in >> obj->address;
+	in.getline(obj->address, SIZE);
 	cout << "Enter Phone#: " << endl;
 	in >> obj->phone;
 
@@ -45,6 +52,6 @@ istream& operator>>(istream& in, Person* obj)
 		in >> obj->age;
 	} while (obj->age < 1);
 
-
+	cin.ignore();
 	return in;
 }

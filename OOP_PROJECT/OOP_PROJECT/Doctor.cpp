@@ -34,6 +34,14 @@ Doctor::Doctor(const char* i_name, const char* i_address, const char* i_phone, i
 	strcpy_s(speciality, i_speciality);
 	Doctor::id = i_id;
 }
+ostream& operator << (ostream & out, Doctor * obj)
+{
+	obj->display_information();
+	cout << "Doctor ID :  " << obj->id << endl;
+	cout << "Doctor speciality " << obj->speciality << endl;
+	return out;
+}
+
 
 
 

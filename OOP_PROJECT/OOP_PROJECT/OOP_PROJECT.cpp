@@ -12,11 +12,16 @@ int main()
 	ptr[0] = new Doctor;
 	ptr[1] = new Admin;
 
-	cin >> ptr[0] >> ptr[1];
-
-
+	cout << "Enter Doctor Information : " << endl;
+	cin >> ptr[0];
+	cout << "Enter Admin Information : " << endl;
+	cin >> ptr[1];
 	cout << ptr[0] << endl;
 	cout << ptr[1] << endl;
-	
-
+	Admin *obj;
+	obj = new Admin;
+	cout << obj;
+	Doctor* obj1;
+	obj1 = new Doctor;
+	cout << obj1;
 }

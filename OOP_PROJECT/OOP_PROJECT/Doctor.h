@@ -24,6 +24,8 @@ public:
 
 	Doctor(const char* = " ", const char* = " ", const char* = " ", int = 0 ,const char* = " ", int = 0);
 
+	friend ostream& operator<<(ostream&, Doctor*);
+
 };
 
 
