@@ -21,5 +21,10 @@ Admin::Admin(const char* i_name, const char* i_address, const char* i_phone,int 
 	//cout << "Admin ^ " << this << endl;
 
 }
+ostream& operator<<(ostream& out, Admin* obj)
+{
+	obj->display_information();
+	return out;
+}
 
 

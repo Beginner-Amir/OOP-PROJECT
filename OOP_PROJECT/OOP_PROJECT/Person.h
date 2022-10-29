@@ -1,7 +1,7 @@
 #ifndef PERSONNN
 #define PERSONNN
 
-
+const int SIZE = 50;
 
 #include <cstring>
 #include <iostream>
@@ -15,10 +15,11 @@ class Person
 {
 
 
-	char name[30];
-	char address[30];
+	char name[SIZE];
+	char address[SIZE];
 	char phone[11];
 	int age;
+
 
 
 public:
@@ -60,7 +61,10 @@ public:
 
 	friend istream& operator >> (istream&, Person*);
 
-	//~Person() { cout << "~Person " << this << endl; }
+	
+	void display_information();
+
+
 
 };
 

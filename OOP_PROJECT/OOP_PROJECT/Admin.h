@@ -21,9 +21,13 @@ public:
 	void input();
 
 
+
+
 	Admin(const char* = " ", const char* = " ", const char* = " ", int = 0);
 
-	//~Admin() { cout << "~Admin" << endl; }
+	friend ostream& operator<<(ostream&, Admin*);
+
+
 };
 
 
